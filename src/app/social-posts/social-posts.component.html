@@ -1,0 +1,12 @@
+<main class="main">
+  <h1 class="title">My Thoughts</h1>
+  <app-post-form (submitEvent)="addPost($event)"> </app-post-form>
+  <button class="thought-button">New Thought</button>
+  <section class="post-container">
+    <app-post
+      *ngFor="let post of posts; index as i"
+      [postRef]="post"
+      (deleteEvent)="deletePost(i)"
+    ></app-post>
+  </section>
+</main>
