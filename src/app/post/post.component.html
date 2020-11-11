@@ -1,5 +1,7 @@
-<div class="post">
+<li class="post">
   <h3>Title: {{ postRef.title }}</h3>
   <p>Thought: {{ postRef.thought }}</p>
-  <button class="delete-button" (click)="emitDeleteEvent()">Delete</button>
-</div>
+  <button class="delete-button" (click)="emitDeleteEvent()">
+    <i class="fas fa-trash"></i>
+  </button>
+</li>

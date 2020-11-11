@@ -34,7 +34,7 @@ export class SocialPostsComponent implements OnInit {
     this.posts.splice(index, 1);
   };
   addPost = (post: Post) => {
-    this.posts.push(post);
+    this.posts.unshift(post);
     this.visible = false;
   };
   toggleModal = (): void => {
