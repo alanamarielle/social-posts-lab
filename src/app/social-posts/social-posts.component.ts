@@ -25,6 +25,7 @@ export class SocialPostsComponent implements OnInit {
       thought: 'Going Up!',
     },
   ];
+  visible: boolean = false;
   constructor() {}
 
   ngOnInit(): void {}
@@ -34,5 +35,9 @@ export class SocialPostsComponent implements OnInit {
   };
   addPost = (post: Post) => {
     this.posts.push(post);
+    this.visible = false;
+  };
+  toggleModal = (): void => {
+    this.visible = true;
   };
 }
